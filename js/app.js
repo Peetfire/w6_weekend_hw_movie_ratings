@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const newitemform = document.querySelector('#new-item-form');
     newitemform.addEventListener('submit', handleNewItemFormSubmit);
+
+    const range = document.querySelector('#score');
+    range.addEventListener('change', handleRangeChange);
   
     // const deleteAllButton = document.querySelector('#delete-all');
     // deleteAllButton.addEventListener('click', handleDeleteAllClick);
@@ -12,6 +15,11 @@ const handleNewItemFormSubmit = function (event) {
     const movieListItem = createMovieListItem(event.target);
     const movieList = document.querySelector('#movie-list');
     movieList.appendChild(movieListItem);
+}
+
+const handleRangeChange = function(){
+    const resultParagraph = document.querySelector('#score-lable');
+    resultParagraph.textContent = `Score: ${this.value}%`;
 }
 
 const createMovieListItem = function(form) {
