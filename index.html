@@ -39,24 +39,24 @@
                 <div class="radio-items">
                     <lable for="rating" class="lable">Age Rating</lable>
                     <input type="radio" id="rating" name="rating" value="U">
-                    <lable for="U">U</lable>
+                    <lable for="U" class="item-lable">U</lable>
                     <input type="radio" id="rating" name="rating" value="PG">
-                    <lable for="PG">PG</lable>
+                    <lable for="PG" class="item-lable">PG</lable>
                     <input type="radio" id="rating" name="rating" value="12A">
-                    <lable for="12A">12A</lable>
+                    <lable for="12A" class="item-lable">12A</lable>
                     <input type="radio" id="rating" name="rating" value="15">
-                    <lable for="15">15</lable>
+                    <lable for="15" class="item-lable">15</lable>
                     <input type="radio" id="rating" name="rating" value="18">
-                    <lable for="18">18</lable>  
+                    <lable for="18" class="item-lable">18</lable>  
                 </div>
                 <div class="check-boxes">
                     <lable for="contains" class="lable">Contains</lable>
-                    <input type="checkbox" id="contains" name="contains" value="Strong Language">
-                    <label for="contains"> Strong Language</label>
+                    <input type="checkbox" id="contains" name="contains" value="Language">
+                    <label for="Language" class="item-lable">Language</label>
                     <input type="checkbox" id="contains" name="contains" value="Nudity">
-                    <label for="contains"> Nudity</label>
+                    <label for="Nudity" class="item-lable"> Nudity</label>
                     <input type="checkbox" id="contains" name="contains" value="Violence">
-                    <label for="contains"> Violence</label>
+                    <label for="Violence" class="item-lable"> Violence</label>
                 </div>
                 <div class="range">
                     <label for="score">% Score:</label>
@@ -67,6 +67,10 @@
         </form>
         <button id="delete-all">Delete All</button>
     </main>
+    <div id="movie-list-container">
+        <h1>Movie List</h1>
+        <ul id="movie-list"></ul>
+    </div>
     
 </body>
 </html>
