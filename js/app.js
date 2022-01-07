@@ -44,6 +44,13 @@ const createMovieListItem = function(form) {
     ageRating.textContent = rating.value;
     movieListItem.appendChild(ageRating);
 
+    const contains = document.querySelectorAll('#contains');
+    const containsValues = getContainsValues(contains);
+    const contentWarning = document.createElement('h5');
+    contentWarning.textContent = containsValues;
+    movieListItem.appendChild(contentWarning);
+
+
     return movieListItem;
 }
 
@@ -53,4 +60,13 @@ const getAgeRating = function(ratings){
             return rating;
         }
     }
+}
+const getContainsValues = function(contains){
+    let values = "";
+    for(const contain of contains){
+        if(contain.checked){
+            values += contain.value + " ";
+        }
+    }
+    return values;
 }
