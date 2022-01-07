@@ -30,7 +30,19 @@ const createMovieListItem = function(form) {
     genre.textContent = form.genre.value;
     movieListItem.appendChild(genre);
 
-    
+    const ratings = document.querySelectorAll('#rating');
+    const rating = getAgeRating(ratings);
+    const ageRating = document.createElement('h5');
+    ageRating.textContent = rating.value;
+    movieListItem.appendChild(ageRating);
 
     return movieListItem;
+}
+
+const getAgeRating = function(ratings){
+    for(const rating of ratings){
+        if(rating.checked){
+            return rating;
+        }
+    }
 }
