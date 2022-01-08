@@ -50,6 +50,10 @@ const createMovieListItem = function(form) {
     contentWarning.textContent = containsValues;
     movieListItem.appendChild(contentWarning);
 
+    const score = document.createElement('p');
+    const scoreBar = createScoreBar(form.score.value);
+    score.textContent = form.score.value;
+    movieListItem.appendChild(scoreBar);
 
     return movieListItem;
 }
@@ -69,4 +73,27 @@ const getContainsValues = function(contains){
         }
     }
     return values;
+}
+const createScoreBar = function(score){
+    const scoreWrapper = document.createElement('div');
+    scoreWrapper.classList.add('score-wrapper');
+    const scoreValue = document.createElement('p');
+    scoreValue.textContent = String(score) + "%";
+    scoreValue.classList.add('score-text');
+    scoreWrapper.appendChild(scoreValue);
+
+    
+    for(let i=0; i <= 100 ; i++){
+        if(i<=score){
+            const scoreFill = document.createElement('div');
+            scoreFill.classList.add('score-fill');
+            scoreWrapper.append(scoreFill);
+        }
+        else{
+            const scoreNoFill = document.createElement('div');
+            scoreNoFill.classList.add('score-no-fill');
+            scoreWrapper.append(scoreNoFill);
+        }
+    }
+    return scoreWrapper;
 }

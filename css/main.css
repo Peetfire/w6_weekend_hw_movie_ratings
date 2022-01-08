@@ -1,0 +1,40 @@
+
+#movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.movie-list-item {
+    width: 150px;
+    margin: 0.5rem 0.5rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #20437c;
+    border-radius: 5%;
+    background: #ddeaff;
+}
+
+.score-wrapper{
+    display: flex;
+    height: 15px;
+    border-width: 1px;
+    border: black;
+}
+
+.score-fill{
+    background-color: rgb(69, 69, 105);
+    width: 1px;
+    margin-top: 2px;
+}
+
+.score-no-fill{
+    background-color: rgb(188, 221, 229);
+    width: 1px;
+    margin-top: 2px;
+}
+
+.score-text{
+    vertical-align: top;
+    margin-right: 5px;
+    margin-top: 0px;
+}
