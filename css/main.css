@@ -1,4 +1,26 @@
-
+body{
+    background-image: url('../img/milkyway.jpeg');
+    background-size: inherit;
+    background-position: center;
+    color: white;
+    font-family: monospace;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+#new-item-form{
+    display: grid;
+    justify-content: center;
+}
+#form-wrapper{
+    border: yellow;
+    border-radius: 10px;
+}
+#movie-list-container > h1{
+    display: flex;
+    justify-content: center;
+}
 #movie-list {
     display: flex;
     flex-wrap: wrap;
@@ -6,33 +28,86 @@
 }
 
 .movie-list-item {
-    width: 150px;
-    margin: 0.5rem 0.5rem;
-    padding: 0.5rem 0.8rem;
-    border: 1px solid #20437c;
-    border-radius: 5%;
-    background: #ddeaff;
+    background-image: url("../img/filmcell2.png");
+    background-size: auto;
+    background-position: center;
+    width: 250px;
+    height: 163px;
+    margin: 10px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 40px 35px; */
 }
 
-.score-wrapper{
+.tv-list-item {
+    background-image: url("../img/oldtv3.png");
+    background-size: auto;
+    background-position:center;
+    width: 280px;
+    height: 163px;
+    margin: 10px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 40px 40px; */
+}
+
+.movie-item-container {
+    height: 133px;
+    width: 180px;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    margin-right: 3px;
+    border: white;
+    border-radius: 8px;
+    border-width: 2px;
+}
+.tv-item-container {
+    height: 133px;
+    width: 175px;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+    margin-right: 50px;
+}
+.line1-container{ 
+    text-align: center;  
+    overflow-wrap: break-word;
+    overflow: hidden;
+    width: inherit;
+}
+
+.line1-container > h3{
+    margin: 0px;
+    margin-top: 5px;
+}
+.line2-container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    align-items: baseline;
+    width: inherit;
+}
+.line2-container > h4, h5{
+    margin: 0px;
+}
+.score-container{
     display: flex;
     height: 15px;
     border-width: 1px;
     border: black;
+    width: inherit;
 }
-
 .score-fill{
     background-color: rgb(69, 69, 105);
-    width: 1px;
+    width: 1.5px;
     margin-top: 2px;
 }
-
 .score-no-fill{
     background-color: rgb(188, 221, 229);
-    width: 1px;
+    width: 1.5px;
     margin-top: 2px;
 }
-
 .score-text{
     vertical-align: top;
     margin-right: 5px;
