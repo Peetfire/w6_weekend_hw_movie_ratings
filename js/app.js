@@ -15,6 +15,7 @@ const handleNewItemFormSubmit = function (event) {
     const movieListItem = createMovieListItem(event.target);
     const movieList = document.querySelector('#movie-list');
     movieList.appendChild(movieListItem);
+    event.target.reset();
 }
 
 const handleRangeChange = function(){
@@ -34,13 +35,7 @@ const createMovieListItem = function(form) {
 
         const movieItemContainer = document.createElement('div');
         movieItemContainer.classList.add('movie-item-container');
-
-        const line1 = createLine1(form);
-        const line2 = createLine2(form);
-        const scoreBar = createScoreBar(form.score.value);
-        movieItemContainer.append(line1);
-        movieItemContainer.append(line2);
-        movieItemContainer.append(scoreBar);
+        anItemContainer(movieItemContainer, form);
 
         movieListItem.append(movieItemContainer);
     } else {
@@ -48,13 +43,7 @@ const createMovieListItem = function(form) {
 
         const tvItemContainer = document.createElement('div');
         tvItemContainer.classList.add('tv-item-container');
-
-        const line1 = createLine1(form);
-        const line2 = createLine2(form);
-        const scoreBar = createScoreBar(form.score.value);
-        tvItemContainer.append(line1);
-        tvItemContainer.append(line2);
-        tvItemContainer.append(scoreBar);
+        anItemContainer(tvItemContainer, form);
 
         movieListItem.append(tvItemContainer);
     }
@@ -78,6 +67,14 @@ const getContainsValues = function(contains){
     }
     return values;
 }
+const anItemContainer = function(itemContainer, form){{
+    const line1 = createLine1(form);
+    const line2 = createLine2(form);
+    const scoreBar = createScoreBar(form.score.value);
+    itemContainer.append(line1);
+    itemContainer.append(line2);
+    itemContainer.append(scoreBar);
+}}
 const createLine1 = function(form){
     // create line1 container
     const line1 = document.createElement('div');
