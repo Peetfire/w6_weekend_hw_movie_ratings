@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const range = document.querySelector('#score');
     range.addEventListener('change', handleRangeChange);
   
-    // const deleteAllButton = document.querySelector('#delete-all');
-    // deleteAllButton.addEventListener('click', handleDeleteAllClick);
+    const deleteAllButton = document.querySelector('#delete-all');
+    deleteAllButton.addEventListener('click', handleDeleteAllClick);
 })
 
 const handleNewItemFormSubmit = function (event) {
@@ -21,6 +21,11 @@ const handleRangeChange = function(){
     const resultParagraph = document.querySelector('#score-lable');
     resultParagraph.textContent = `Score: ${this.value}%`;
 }
+
+const handleDeleteAllClick = function (event) {
+    const movieList = document.querySelector('#movie-list');
+    movieList.innerHTML = '';
+  }
 
 const createMovieListItem = function(form) {
     const movieListItem = document.createElement('div');
@@ -79,7 +84,7 @@ const createLine1 = function(form){
     line1.classList.add('line1-container');
 
     // create content for line1
-    const title = document.createElement('h3');
+    const title = document.createElement('h4');
     title.textContent = form.title.value;
 
     // apend content to line1

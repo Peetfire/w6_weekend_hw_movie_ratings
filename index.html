@@ -12,29 +12,31 @@
     <main>
         <form id="new-item-form"'>
             <div id="form-container">
-                <div class="form-item">
-                    <label for="category" class="lable">Category</label>
-                    <select id="category" required>
-                        <option value="">select</option>
-                        <option value="movie">Movie</option>
-                        <option value="tv show">TV Show</option>
-                    </select>
+                <div id="line1-container">
+                    <div class="form-item">
+                        <label for="category" class="lable">Category</label>
+                        <select id="category" required>
+                            <option value="">select</option>
+                            <option value="movie">Movie</option>
+                            <option value="tv show">TV Show</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <lable for="genre" class="lable">Genre</lable>
+                        <select id="genre" required>
+                            <option value="">select</option>
+                            <option value="Action">Action</option>
+                            <option value="Comedy">Comedy</option>
+                            <option value="Thriller">Thriller</option>
+                            <option value="Sci-Fi">Sci-Fi</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Musical">Musical</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-item">
+                <div id="title-container">
                     <label for="title" class="lable">Title</label>
                     <input type="text" id="title" required>
-                </div>
-                <div class="form-item">
-                    <lable for="genre" class="lable">Genre</lable>
-                    <select id="genre" required>
-                        <option value="">select</option>
-                        <option value="Action">Action</option>
-                        <option value="Comedy">Comedy</option>
-                        <option value="Thriller">Thriller</option>
-                        <option value="Sci-Fi">Sci-Fi</option>
-                        <option value="Horror">Horror</option>
-                        <option value="Musical">Musical</option>
-                    </select>
                 </div>
                 <div class="radio-items">
                     <lable for="rating" class="lable">Age Rating</lable>
@@ -63,9 +65,11 @@
                     <input type="range" id="score" name="score" min="0" max="100">
                 </div>
             </div>
-            <input type="submit" value="save"/>
+            <div id="button-container">
+                <input id="save" type="submit" value="Save"/>
+                <button id="delete-all" type="button">Delete All</button>
+            </div>
         </form>
-        <button id="delete-all">Delete All</button>
     </main>
     <div id="movie-list-container">
         <h1>Movie List</h1>
